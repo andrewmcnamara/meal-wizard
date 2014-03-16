@@ -1,7 +1,22 @@
-<html ng-app>
+<!DOCTYPE html>
+<html ng-app='MealWizard'>
 <head>
- 
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script> 
+<script src="app.js"> </script/>
 </head>
 
+<body ng-controller="MainCtrl" >
+<h2>Ingredients</h2>
+<ul >
+	<!-- The services will be inserted here -->
+	<li ng-repeat="ingredient in ingredients">
+	<label>
+		<input type="checkbox"  value="1" name="{{ingredient.name}}" />
+		{{ingredient.name}}
+	</label>
+	</li>
+</ul>
+
+</body>
 
 </html>
